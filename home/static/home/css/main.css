@@ -1,0 +1,35 @@
+#intro {
+    background-image: url("../img/kid_breaking_wall.jpg");
+    height: 100vh;
+    }
+
+    /* Height for devices larger than 576px */
+@media (min-width: 992px) {
+    #intro {
+        
+        margin-top: -58.59px;
+    }
+}
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar {
+    background-color: sandybrown !important;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f6d365;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(246, 211, 101, 0.35), rgba(251, 149, 121, 0.35));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(246, 211, 101, 0.35), rgba(251, 149, 121, 0.35))
+}
+
+.bg-image {
+    background-position: 23%;
+}
