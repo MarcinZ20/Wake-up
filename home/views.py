@@ -29,6 +29,16 @@ def index(request):
         return render(request, 'index.html', {})
 
 def contact(request):
-
         return render(request, "contact.html", {})
 
+def kids(request):
+    return render(request, "kursy_dla_dzieci.html", {})
+
+def teens(request):
+    return render(request, "kursy_dla_nastolatkow.html", {})
+
+def adults(request):
+    return render(request, "kursy_dla_doroslych.html", {})
+
+def events(request):
+    return render(request, "wydarzenia.html", {})

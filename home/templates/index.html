@@ -39,6 +39,7 @@
                 <nav class="navbar navbar-expand-lg navbar-dark bg-light">
                     <div class="container-fluid">
                         <!-- <a class="navbar-brand text-white" href="#">Wake up!</a> TODO: Check if neccessary -->
+                        <div class="navbar-brand"></div>
                         <button
                             class="navbar-toggler"
                             type="button"
@@ -49,7 +50,7 @@
                             aria-label="Toggle navigation">
                             <span class="fas fa-bars text-white"></span>
                         </button>
-                        <div class="collapse navbar-collapse justify-content-center" id="navbarToggler">
+                        <div class="collapse navbar-collapse" id="navbarToggler">
                             <ul class="navbar-nav mb-2 mb-lg-0">
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -70,18 +71,18 @@
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                         <li>
-                                            <a class="dropdown-item" href="#">Dla dzieci</a>
+                                            <a class="dropdown-item" href="{% url 'kids'%}">Dla dzieci</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="#">Dla nastolatków</a>
+                                            <a class="dropdown-item" href="{% url 'teens' %}">Dla nastolatków</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="#">Dla dorosłych</a>
+                                            <a class="dropdown-item" href="{% url 'adults' %}">Dla dorosłych</a>
                                         </li>
                                         </ul>
                                     </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="">Wydarzenia</a>
+                                    <a class="nav-link" href="{% url 'events' %}">Wydarzenia</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#contact-page">Kontakt</a>
@@ -193,7 +194,8 @@
     <!-- About us -->
 
     <!-- Contact -->
-    <div class="contact d-flex flex-column justify-content-center align-items-center bg-col" id="contact-page">       
+    <div class="contact d-flex flex-column justify-content-center align-items-center bg-col" id="contact-page">   
+        <h1 class="display-4 fw-normal">Kontakt</h1>    
         <form class="contact-form d-flex flex-column-reverse flex-md-row m-auto mt-5 mb-5 shadow-3-strong" action="{% url 'contact' %}" method="post">
 
             {% csrf_token %}
