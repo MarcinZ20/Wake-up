@@ -24,74 +24,80 @@
     <link rel="shortcut icon" href="{% static 'home/img/favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
+    <!-- Back to top button -->
+    <button
+        type="button"
+        class="btn btn-secondary btn-floating btn-lg"
+        id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <header>
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top gradient-custom2">
-            <div class="container-fluid">
-                <a class="navbar-brand text-white" href="#">Wake up!</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-mdb-toggle="collapse"
-                    data-mdb-target="#navbarToggler"
-                    aria-controls="navbarToggler"
-                    aria-expanded="true"
-                    aria-label="Toggle navigation">
-                    <span class="fas fa-bars text-white"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarToggler">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">O nas</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                id="navbarDropdownMenuLink"
-                                role="button"
-                                data-mdb-toggle="dropdown"
-                                aria-expanded="false"
-                                aria-label="Toggle navigation">
-                                Kursy
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li>
-                                    <a class="dropdown-item" href="#">Dla dzieci</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Dla nastolatków</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Dla dorosłych</a>
-                                </li>
-                                </ul>
-                            </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Wydarzenia</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Kontakt</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Navigation -->
-
         <!-- Background image -->
         <div id="intro" class="bg-image shadow-2-strong">
             <div class="mask gradient-custom">
-                <div class="container d-flex align-items-start justify-content-center text-center h-100 main-text">
-                    <div class="text-white" style="margin-top: 4.5rem;">
-                        <h1 class="mb-2 display-1 fw-bold" style="text-shadow: 3px 2px 3px rgba(150, 150, 150, 0.7);">Wake up!</h1>
+                <!-- Navigation -->
+                <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+                    <div class="container-fluid">
+                        <!-- <a class="navbar-brand text-white" href="#">Wake up!</a> TODO: Check if neccessary -->
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-mdb-toggle="collapse"
+                            data-mdb-target="#navbarToggler"
+                            aria-controls="navbarToggler"
+                            aria-expanded="true"
+                            aria-label="Toggle navigation">
+                            <span class="fas fa-bars text-white"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarToggler">
+                            <ul class="navbar-nav mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about-us-page">O nas</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a
+                                        class="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="navbarDropdownMenuLink"
+                                        role="button"
+                                        data-mdb-toggle="dropdown"
+                                        aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                        Kursy
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li>
+                                            <a class="dropdown-item" href="#">Dla dzieci</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Dla nastolatków</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Dla dorosłych</a>
+                                        </li>
+                                        </ul>
+                                    </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Wydarzenia</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact-page">Kontakt</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Navigation end-->
+                <div class="main-text-container d-flex align-items-start align-items-xl-center justify-content-center justify-content-xl-end text-center h-100">
+                    <div class="text-white m-2 p-2 mpt">
+                        <h1 class="mb-2 display-1 fw-bold">Wake up!</h1>
                         <h6 class="mb-2 ">More than a school of English<h6>
                         <a class="btn btn-secondary btn-lg m-2 shadow-4" role="button"
-                            rel="nofollow" target="_blank">Zobacz więcej!</a>
+                            rel="nofollow" target="_blank">Zobacz więcej!
+                        <a>
                     </div>
                 </div>
             </div>
@@ -99,89 +105,87 @@
     </header>
 
     <!-- About us -->
-    <div class="about" >
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 d-grid mb-2 mt-2 m-auto">
-                    <div class="text-black text-center">
-                        <h1 class="mt-4 mb-4 display-2 fw-normal">O nas ...</h1>
-                        <p class="font-weight-light">Postanowiłyśmy połączyć dwie nasze pasje:
-                            język angielski i <span class="text-magnification">pracę z drugim człowiekiem</span>, by stworzyć przestrzeń, 
-                            w której budzimy Wasze <span class="text-magnification">umiejętności</span> i <span class="text-magnification">nieodkryte talenty</span> - nie tylko językowe.
-                            Zawsze jesteśmy optymistycznie nastawione do świata oraz ludzi
-                            i pragniemy podzielić się z Wami naszą energią!</p>
-                    </div>
-                    <a class="btn btn-lg m-2 ms-4 me-4 gradient-custom" role="button" style="background-color: var(--dark-yellow);color: white;">Poznaj naszą ofertę!
-                    </a>
+    <div class="about d-flex align-items-start justify-content-center pt-5 pb-5 bg-col" id="about-us-page">
+        <div class="row m-4 about-page-content">
+            <div class="col-lg-5 d-grid mb-2 mt-2 m-auto">
+                <div class="container-about d-flex flex-column align-items-center justify-content-center">
+                    <h1 class="display-4 fw-normal p-2">O nas ...</h1>
+                    <p class="font-weight-light p-2">Postanowiłyśmy połączyć dwie nasze pasje:
+                                    język angielski i <span class="text-secondary"><strong>pracę z drugim człowiekiem</strong></span>, by stworzyć przestrzeń, 
+                                    w której budzimy Wasze <span class="text-secondary"><strong>umiejętności</strong></span> i <span class="text-secondary"><strong>nieodkryte talenty</strong></span> - nie tylko językowe.
+                                Zawsze jesteśmy optymistycznie nastawione do świataoraz ludzi
+                                i pragniemy podzielić się z Wami naszą energią!
+                    </p>
+                    <button type="submit" class="btn btn-lg mt-2 text-white gradient-custom main-button" role="button">Zapytaj o więcej!
+                    </button>
                 </div>
-                <div class="col-md-8 text-center">
-                    <!-- Photo gallery -->
-                    <div
-                        id="carouselExampleCrossfade"
-                        class="carousel slide carousel-fade mt-5 mb-5"
-                        data-mdb-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button
-                                type="button"
-                                data-mdb-target="#carouselExampleCrossfade"
-                                data-mdb-slide-to="0"
-                                class="active"
-                                aria-current="true"
-                                aria-label="Slide 1">
-                            </button>
-                            <button
-                                type="button"
-                                data-mdb-target="#carouselExampleCrossfade"
-                                data-mdb-slide-to="1"
-                                aria-label="Slide 2">
-                            </button>
-                            <button
-                                type="button"
-                                data-mdb-target="#carouselExampleCrossfade"
-                                data-mdb-slide-to="2"
-                                aria-label="Slide 3">
-                            </button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-mdb-interval="6000">
-                                <img
-                                    src="{% static 'home/img/photo1.jpg' %}"
-                                    class="d-block w-100"
-                                    alt="Cutting the rope"
-                                />
-                            </div>
-                            <div class="carousel-item" data-mdb-interval="6000">
-                                <img
-                                    src="{% static 'home/img/photo2.jpg' %}"
-                                    class="d-block w-100"
-                                    alt="kids"
-                                />
-                            </div>
-                            <div class="carousel-item" data-mdb-interval="6000">
-                                <img
-                                    src="{% static 'home/img/photo3.jpg' %}"
-                                    class="d-block w-100"
-                                    alt="kids playing with baloons"
-                                />
-                            </div>
-                        </div>
+            </div>
+            <div class="col-lg-7 d-grid mb-2 mt-2 m-auto">
+                <!-- Photo gallery -->
+                <div
+                    id="carousel-gallery"
+                    class="carousel slide carousel-fade mt-5 mb-5"
+                    data-mdb-ride="carousel">
+                    <div class="carousel-indicators">
                         <button
-                            class="carousel-control-prev"
                             type="button"
-                            data-mdb-target="#carouselExampleCrossfade"
-                            data-mdb-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
+                            data-mdb-target="#carousel-gallery"
+                            data-mdb-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide 1">
                         </button>
                         <button
-                            class="carousel-control-next"
+                            type="button"                                data-mdb-target="#carousel-gallery"
+                            data-mdb-slide-to="1"
+                            aria-label="Slide 2">
+                        </button>
+                        <button
                             type="button"
-                            data-mdb-target="#carouselExampleCrossfade"
-                            data-mdb-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
+                            data-mdb-target="#carousel-gallery"
+                            data-mdb-slide-to="2"
+                            aria-label="Slide 3">
                         </button>
                     </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-mdb-interval="6000">
+                            <img
+                                src="{% static 'home/img/photo1.jpg' %}"
+                                class="d-block w-100"
+                                alt="Cutting the rope"
+                            />
+                        </div>
+                        <div class="carousel-item" data-mdb-interval="6000">
+                            <img
+                                src="{% static 'home/img/photo2.jpg' %}"
+                                class="d-block w-100"
+                                alt="kids"
+                            />
+                        </div>
+                        <div class="carousel-item" data-mdb-interval="6000">
+                            <img
+                                src="{% static 'home/img/photo3.jpg' %}"
+                                class="d-block w-100"
+                                alt="kids playing with baloons"
+                            />
+                        </div>
+                    </div>
+                    <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-mdb-target="#carousel-gallery"
+                        data-mdb-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"><span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-mdb-target="#carousel-gallery"
+                        data-mdb-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -189,16 +193,102 @@
     <!-- About us -->
 
     <!-- Contact -->
-    <div class="contact-form" style="height: 100vh;background-color: thistle;">
+    <div class="contact d-flex flex-column justify-content-center align-items-center bg-col" id="contact-page">       
+        <form class="contact-form d-flex flex-column-reverse flex-md-row m-auto mt-5 mb-5 shadow-3-strong" action="{% url 'contact' %}" method="post">
 
+            {% csrf_token %}
+
+            <!-- Left form side -->
+            <div class="left-form gradient-custom p-3 text-white">
+                <h2 class="p-2 pb-0 m-0">Contact us!</h1>
+                <p class="pb-2 ps-2 mb-0">Chat with us about anything!</p>
+                <div class="methods">
+                    <div class="contact-method d-flex flex-row align-items-center p-1">
+                        <i class="fas fa-map-marked p-2 fa-lg"></i>
+                        <a class="p-2 mb-0 small text-white" href="https://www.google.pl/maps/place/K.+K.+Wielkiego+92,+32-300+Olkusz/@50.2745128,19.5745876,715m/data=!3m2!1e3!4b1!4m5!3m4!1s0x4716e37cb27488a1:0x856392aaa3b28553!8m2!3d50.2745128!4d19.5767763" target="_blank"> ul. Olkuska 32, Olkusz 32-300</a> 
+                    </div>
+                    <div class="contact-method d-flex flex-row align-items-center p-1" >
+                        <i class="fas fa-phone-alt p-2 fa-lg"></i>
+                        <a class="p-2 mb-0 small text-white" href="tel:514-720-831">+48 514-720-831</a>
+                    </div>
+                    <div class="contact-method d-flex flex-row align-items-center p-1" >
+                        <i class="fas fa-paper-plane p-2 fa-lg"></i>
+                        <a class="p-2 mb-0 small text-white" href="mailto:wakeup.olkusz@gmail.com">wakeup@gmail.com</a>
+                    </div>
+                    <div class="contact-method d-flex flex-row align-items-center p-1" >
+                        <i class="fab fa-facebook p-2 fa-lg"></i>
+                        <a class="p-2 mb-0 small text-white" href="https://www.facebook.com/Wake-up-108224535038622" target="_blank">www.facebook/wakeup-olkusz<a>
+                    </div>
+                </div>
+            </div>
+            <!-- Left form side -->
+
+            <!-- Right form side -->
+            <div class="right-form d-flex flex-column p-3">
+                <h1 class="p-2 m-0">Let's get in touch!</h1>
+                <div class="container d-flex flex-row align-items-start p-2">
+                    <div class="form-outline mt-2 me-1 w-50">
+                        <input type="text" id="typeText" class="form-control" name="input-name"
+                        />
+                        <label class="form-label" for="typeText">Imię i Nazwisko</label>
+                    </div>
+                    <div class="form-outline mt-2 ms-1 w-50">
+                        <input type="email" id="typeEmail" class="form-control" name="input-mail"
+                        required/>
+                        <label class="form-label" for="typeEmail">e-mail</label>
+                    </div>
+                </div>
+                <div class="form-outline mt-2 ms-2 me-2">
+                    <input type="text" id="typeText" class="form-control" name="input-topic"/>
+                    <label class="form-label" for="typeText">Temat</label>
+                </div>
+                <div class="form-outline mt-3 ms-2 me-2">
+                    <textarea class="form-control" id="textAreaExample" rows="4" name="input-message" required></textarea>
+                    <label class="form-label" for="textAreaExample">Wiadomość</label>
+                </div>
+                <button type="submit" class="btn btn-lg m-2 text-white gradient-custom" role="button">Wyślij
+                </button>
+            </div>
+            <!-- Right form side -->
+        </form>
+        <div class="icons d-flex align-items-center justify-content-center m-4">
+            <section class="m-2">
+                <!-- Facebook -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="https://www.facebook.com/Wake-up-108224535038622" role="button" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        
+                <!-- Google -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
+        
+                <!-- Instagram -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+            </section>
+        </div>
     </div>
     <!-- Contact -->
+
+    <!-- Footer -->
+    <footer class="text-center text-white">
+        <!-- Copyright -->
+        <div class="bg-secondary text-center attributions p-2 ">
+            © 2022 Copyright:
+            <a href="https://github.com/MarcinZ20" target="_blank">Marcin Zub</a>
+            | Attributions:
+            <a href="https://mdbootstrap.com/" target="_blank">MDBootstrap,</a>
+            <a href="https://fontawesome.com/license" target="_blank">Font Awsome</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
     <!-- MDB -->
     <script 
         type="text/javascript" 
         src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js">
     </script>
-
+    <!-- script.js -->
+    <script 
+    type="text/javascript" 
+    src="{% static 'home/script/script.js' %}">
+    </script>
 </body>
 </html>
