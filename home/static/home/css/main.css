@@ -55,6 +55,12 @@ body, html {
     background-position: 23% 60%;
 }
 
+@media (min-width: 992px) and (max-width: 1200px) {
+    .bg-image {
+        background-position: 0% 60%;
+    }
+}
+
 .main-formula {
     background-color: #f7f7f7 !important;
 }
