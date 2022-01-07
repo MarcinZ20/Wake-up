@@ -19,21 +19,16 @@
         <!-- MDB -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet"/>
         <!-- CSS -->
-        <link rel="stylesheet" href="{% static 'home/css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/contact.css' %}">
         <!-- Favicon -->
         <link rel="shortcut icon" href="{% static 'home/img/favicon.ico' %}" type="image/x-icon">
     </head>
-<body>
+<body class="bd-bg">
     <div class="container d-flex flex-column align-items-center justify-content-center" style="height: 100vh;">
-        <i class="far fa-thumbs-up fa-6x m-3"></i>
+        <i class="far fa-thumbs-up fa-6x m-3 thumb "></i>
         <h1>Message send succesfully!</h1>
         <p>We will contact you back as soon as possible!</p>
-        <button type="button" 
-                class="btn btn-secondary btn-lg m-3 ps-5 pe-5" 
-                href="#" 
-                data-mdb-ripple-color="dark">
-                Back to home page 
-        </button>
+        <a class="btn btn-secondary btn-lg m-3 ps-5 pe-5" href="{% url 'home' %}">Back to home page!</a>
     </div>
 
     <!-- MDB -->

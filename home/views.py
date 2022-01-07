@@ -5,6 +5,7 @@ import time
 # Create your views here.
 
 def index(request):
+
     if request.method == "POST":
 
         # Get values for the mail
@@ -28,4 +29,6 @@ def index(request):
         return render(request, 'index.html', {})
 
 def contact(request):
-    return render(request, "contact.html", {})
+
+        return render(request, "contact.html", {})
+
