@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Wake up | Home</title>
+    <title>Wake up | Kursy dla dorosłych</title>
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
@@ -19,12 +19,98 @@
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet"/>
     <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'home/css/adults.css' %}">
     <link rel="stylesheet" href="{% static 'home/css/main.css' %}">
     <!-- Favicon -->
     <link rel="shortcut icon" href="{% static 'home/img/favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
-    <h1>Adults here</h1>
+    <div class="adults">    
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+                <!-- <a class="navbar-brand text-white" href="#">Wake up!</a> TODO: Check if neccessary -->
+                <div class="navbar-brand"></div>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarToggler"
+                    aria-controls="navbarToggler"
+                    aria-expanded="true"
+                    aria-label="Toggle navigation">
+                    <span class="fas fa-bars text-black"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarToggler">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}">O nas</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle active"
+                                href="#"
+                                id="navbarDropdownMenuLink"
+                                role="button"
+                                data-mdb-toggle="dropdown"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                Kursy
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'kids'%}">Dla dzieci</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'teens' %}">Dla nastolatków</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'adults' %}">Dla dorosłych</a>
+                                </li>
+                                </ul>
+                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'events' %}">Wydarzenia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container d-grid">
+            <div class="row">
+                <div class="left-side col-lg-4 d-flex flex-column align-items-center justify-content-center text-center">
+                    <h1 class="display-4 p-2 m-2">Dorośli</h1>
+                    <p class="mb-0">Dla dorosłych słuchaczy proponujemy zajęcia w oparciu o metodę standardową oraz <span class="text-distinction">metodę bezpośrednią</span>.
+                        Metoda Bezpośrednia - Direct Method jest szczególnie polecana dla naszych dorosłych słuchaczy. Główny cel metody to <span class="text-distinction">nauczanie umiejętności komunikacji</span>, przy minimalizacji użycia języka ojczystego oraz wykształcenie pewnych odruchów językowych.           
+                    </p>
+                    <div class="collapse mb-3 mt-3 scroll-section" id="collapseWithScrollbar" style="max-height: 300px;max-width: fit-content;overflow: auto;">
+                        Podczas zajęć rozwijane są wszystkie kompetencje językowe tzn.: mówienie, rozumienie tekstu, pisanie oraz słuchanie, a największy nacisk kładziemy na pracę ustną oraz  praktykę językową. 80% zajęć to praca ustna z lektorem. Zajęcia prowadzone są całkowicie w języku angielskim. 
+                            Nauka języka metodą bezpośrednią jest szybsza i bardziej efektywna za sprawą regularnych powtórek materiału.
+                            Specjalnie dla podręczników Direct została opracowana  platforma internetowa, na której można znaleźć jeszcze więcej atrakcyjnych zadań, korzystając z ponad 100 dodatkowych godzin nauki.
+                    </div>
+                    <button 
+                        class="btn btn-secondary mt-2 mb-2"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#collapseWithScrollbar"
+                        aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Czytaj dalej
+                    </button>
+                </div>
+                <div class="rigth-side col-lg-8">
+                    <img src="{% static 'home/img/adults.svg' %}" alt="adults" class="img-fluid"></img>
+                </div>
+                <div class="row">
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- MDB -->
     <script 
     type="text/javascript" 
