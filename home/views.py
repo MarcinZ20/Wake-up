@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
-import time
+import environ
 
-# Create your views here.
+env = environ.Env()
+environ.Env.read_env()
 
 def index(request):
 
@@ -19,7 +20,7 @@ def index(request):
             subject=f'{name} -> {topic}', 
             message=message,
             from_email=mail,
-            recipient_list=['marcin26012000@gmail.com']
+            recipient_list=[env("RECIPIENT_ADDRESS")]
         )
         
         # Return "thanks for contacting us" page
