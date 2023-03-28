@@ -11,7 +11,5 @@ https://www.figma.com/file/J18wFMWHXIOqi9pEAkZW1v/Wake-up!?node-id=0%3A1
 - Java Script
 - Python
 - Django
-- SQL Lite
 
 ### Deployment 
-It will be deployed next week!
